@@ -1,3 +1,5 @@
+// File: @openzeppelin/contracts/token/ERC20/IERC20.sol
+
 // SPDX-License-Identifier: MIT
 // OpenZeppelin Contracts (last updated v4.6.0) (token/ERC20/IERC20.sol)
 
@@ -81,7 +83,12 @@ interface IERC20 {
     ) external returns (bool);
 }
 
+// File: @openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol
 
+// SPDX-License-Identifier: MIT
+// OpenZeppelin Contracts v4.4.1 (token/ERC20/extensions/IERC20Metadata.sol)
+
+pragma solidity ^0.8.0;
 
 /**
  * @dev Interface for the optional metadata functions from the ERC20 standard.
@@ -105,6 +112,12 @@ interface IERC20Metadata is IERC20 {
     function decimals() external view returns (uint8);
 }
 
+// File: @openzeppelin/contracts/utils/Context.sol
+
+// SPDX-License-Identifier: MIT
+// OpenZeppelin Contracts v4.4.1 (utils/Context.sol)
+
+pragma solidity ^0.8.0;
 
 /**
  * @dev Provides information about the current execution context, including the
@@ -125,6 +138,13 @@ abstract contract Context {
         return msg.data;
     }
 }
+
+// File: @openzeppelin/contracts/token/ERC20/ERC20.sol
+
+// SPDX-License-Identifier: MIT
+// OpenZeppelin Contracts (last updated v4.7.0) (token/ERC20/ERC20.sol)
+
+pragma solidity ^0.8.0;
 
 
 
@@ -502,6 +522,11 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
         uint256 amount
     ) internal virtual {}
 }
+
+// File: contracts/Insureum.sol
+
+// SPDX-License-Identifier: MIT
+pragma solidity >=0.4.22 <0.9.0;
 
 contract Insureum is ERC20 {
     constructor() ERC20("Insureum", "ISR") {
